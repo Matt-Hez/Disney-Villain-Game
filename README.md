@@ -1,4 +1,4 @@
-# Disney_Villain_Game
+# Disney-Villain-Game
 Hello, please find included a zip file that contains the HTML, CSS, and JavaScript code for a quote matching game.
 
 I do not claim any rights to the included pictures, fonts, colors, or any other IP. If there are any issues I will gladly remove this project.
