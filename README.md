@@ -4,7 +4,7 @@ Hello, please find included a zip file that contains the HTML, CSS, and JavaScri
 I do not claim any rights to the included pictures, fonts, colors, or any other IP. If there are any issues I will gladly remove this project.
 
 To be able to play:
-1. Download the zip file.
+1. Clone the repository.
 2. Unzip the contents into a singular folder.
 3. Open the HTML file (Chrome works best).
 
