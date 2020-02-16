@@ -143,7 +143,7 @@ function init(){
 }
 
 resultsButton.addEventListener("click", function(){
-	if(score < -5){
+	if(score <= -5){
 		alert("You scored " + score + ", you need to watch more Disney. Score Reset.");
 	}
 	if (score > -5 && score< 0){
@@ -156,10 +156,10 @@ resultsButton.addEventListener("click", function(){
 		if(score/attempt < 1){
 			alert("You survived!!! You scored" + score + " out of " + attempt + "! Score Reset.");
 		}
-		if(score/attempt > 1 && score/attempt < 5){
+		if(score/attempt >= 1 && score/attempt < 5){
 			alert("Wow! You are almost a disney wiz! You scored " + score + " out of " + attempt + "! Score Reset.");
 		}
-		if(score/attempt > 5 && score/attempt < 8){
+		if(score/attempt >= 5 ){
 				alert("What a fantasmic score! You are a true disney fan! You scored " + (score/attempt)*100 + "% Have a magical day! Score Reset.");
 		}
 	}
