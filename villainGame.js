@@ -148,7 +148,7 @@ resultsButton.addEventListener("click", function(){
 		alert("You scored " + score + ", good try! You got this next time! Score Reset.");
 	}
 	else{
-		alert("What a fantasmic score! You are a true disney fan! You scored " + score + " out of " + attempt +  " have a magical day! Score Reset.");
+		alert("What a fantasmic score! You are a true disney fan! You scored " + score +  " have a magical day! Score Reset.");
 	}	
 });
 
