@@ -18,6 +18,7 @@ var img6 = document.getElementsByTagName("img")[5];
 var imgs = [img1, img2, img3, img4, img5, img6];
 var score = 0;
 var attempt = 0;
+var correctAnswer = 0;
 
 /*var villains = [
 	"Maleficent", "Ursula", "Hades", "Scar", "QoH", "Mother Gothel", "Cruella", "Jafar", "Yzma",
@@ -137,6 +138,7 @@ var quotes = [
 init();
 
 function init(){
+	alert("THE DISNEY VILLAIN QUOTE GAME! \nThere is a quote from a villain, click on the correct villain to increase your score, however, incorrect answers will cause your score to decrease! \n click \"Results\" to see your score and reset the game");
 	setupModeButtons();
 	setupSquares();
 	reset();
@@ -145,13 +147,19 @@ function init(){
 resultsButton.addEventListener("click", function(){
 
 	if (score < 0){
-		alert("You scored " + score + ", good try! You got this next time! Score Reset.");
+		alert("You scored " + score + ", good try! You got this next time! \nScore Reset.");
 	}
+	else
+		if(score == 0){
+			alert("You scored 0, play some more rounds. \nScore Reset")
+		}
 	else{
-		alert("What a fantasmic score! You are a true disney fan! You scored " + score + " out of " + attempt +  " have a magical day! Score Reset.");
-	}
+		{
+		alert("What a fantasmic score! You are a true disney fan! You got " + correctAnswer + " correct out of " + attempt +  " have a magical day! \nScore Reset.");
+	}}
 	score = 0;
-	attempt = 0;	
+	attempt = 0;
+	reset();	
 });
 
 function setupModeButtons(){
@@ -178,7 +186,7 @@ function setupSquares(){
 			}	else
 			if(clickedVillain == pickedVillain){
 				messageDisplay.textContent = "Correct!";
-				resetButton.textContent = "Play Again?"
+				resetButton.textContent = "Another Round?"
 				changeVillains(clickedVillain);
 				scoreUpdateUp();
 			} else {
@@ -262,6 +270,7 @@ function randomVillain(){
 }
 
 function scoreUpdateUp(){
+	correctAnswer++;
 	score++;
 	attempt++;
 }
