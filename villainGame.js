@@ -172,7 +172,7 @@ function setupSquares(){
 			var clickedVillain = this.id;
 			//compare villain to pickedVillain
 			if(clickedVillain == "clicked"){
-  			console.log("Cannot click on previously clicked object");
+  			console.log(clicked)
 			}	else
 			if(clickedVillain == pickedVillain){
 				messageDisplay.textContent = "Correct!";
@@ -218,13 +218,14 @@ resetButton.addEventListener("click", function(){
 	reset();
 })
 
-	function changeVillains(villain){
-		//loop through all squares
-		for(var i = 0; i < squares.length; i++){
-			//change each Square to match given villain.
-			imgs[i].setAttribute("src",webImages[villain]);
-		}
+function changeVillains(villain){
+	//loop through all squares
+	for(var i = 0; i < squares.length; i++){
+		//change each Square to match given villain.
+		imgs[i].setAttribute("src",webImages[villain]);
+		squares[i].id = "clicked";
 	}
+}
 
 function pickVillain(){
 	var random = Math.floor(Math.random() * villains.length);
