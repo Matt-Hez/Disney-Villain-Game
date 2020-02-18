@@ -148,7 +148,7 @@ resultsButton.addEventListener("click", function(){
 		alert("You scored " + score + ", good try! You got this next time! Score Reset.");
 	}
 	else{
-		alert("What a fantasmic score! You are a true disney fan! You scored " + score +  " have a magical day! Score Reset.");
+		alert("What a fantasmic score! You are a true disney fan! You scored " + score + " out of " + attempt +  " have a magical day! Score Reset.");
 	}	
 });
 
@@ -171,6 +171,9 @@ function setupSquares(){
 			//grab villain of clicked square
 			var clickedVillain = this.id;
 			//compare villain to pickedVillain
+			if(clickedVillain == "clicked"){
+  			console.log(clicked)
+			}	else
 			if(clickedVillain == pickedVillain){
 				messageDisplay.textContent = "Correct!";
 				resetButton.textContent = "Play Again?"
@@ -181,6 +184,7 @@ function setupSquares(){
 				messageDisplay.textContent = "Try Again";
 				scoreUpdateDown();
 			}
+			this.id = "clicked";
 		});
 	}
 }
