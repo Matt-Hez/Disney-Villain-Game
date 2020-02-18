@@ -149,7 +149,9 @@ resultsButton.addEventListener("click", function(){
 	}
 	else{
 		alert("What a fantasmic score! You are a true disney fan! You scored " + score + " out of " + attempt +  " have a magical day! Score Reset.");
-	}	
+	}
+	score = 0;
+	attempt = 0;	
 });
 
 function setupModeButtons(){
