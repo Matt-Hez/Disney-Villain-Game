@@ -172,7 +172,7 @@ function setupSquares(){
 			var clickedVillain = this.id;
 			//compare villain to pickedVillain
 			if(clickedVillain == "clicked"){
-  			console.log(clicked)
+  			console.log("Cannot click on previously clicked object");
 			}	else
 			if(clickedVillain == pickedVillain){
 				messageDisplay.textContent = "Correct!";
